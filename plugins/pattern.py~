@@ -1,0 +1,26 @@
+from time import sleep
+from slackbot.bot import respond_to
+
+@respond_to('コーヒー')
+def cofee(message):
+    message.reply('少々お待ちを')
+    sleep(15)
+    message.reply('どうぞ')
+
+#長距離練習航海
+@respond_to('長距離練習航海')
+@respond_to('長距離')
+@respond_to('長')
+def t(message):
+    message.reply('やりました。')
+    sleep(60*30)
+    message.reply('作戦完了。艦隊が帰投します。')
+
+#海上護衛任務
+@respond_to('海上護衛任務')
+@respond_to('海上護衛')
+@respond_to('海')
+def t(message):
+    message.reply('やりました。')
+    sleep(60*90)
+    message.reply('作戦完了。艦隊が帰投します。')
